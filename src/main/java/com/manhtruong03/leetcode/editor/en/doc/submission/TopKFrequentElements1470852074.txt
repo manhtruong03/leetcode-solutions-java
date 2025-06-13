@@ -1,0 +1,36 @@
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+
+        // count
+        Map<Integer, Integer> countNum = new HashMap<>();
+        for (int num : nums) {
+            countNum.put(num, countNum.getOrDefault(num, 0) + 1);
+        }
+
+        // swap key vs value
+        Map<Integer, List<Integer>> countNumSwap = new HashMap<>();
+        countNum.forEach((num, countValue) -> {
+            countNumSwap.computeIfAbsent(countValue, key -> new ArrayList<>()).add(num);
+        });
+
+        List<Integer> countValues = new ArrayList<>(countNumSwap.keySet());
+        Collections.sort(countValues, Comparator.reverseOrder());
+
+        int[] result = new int[k];
+        for (int i = 0, j = 0; i < k; j++) {
+            int countValue = countValues.get(j);
+            List<Integer> listOfNum = countNumSwap.get(countValue);
+
+            int count = 0;
+            while (count < listOfNum.size()) {
+                result[i] = listOfNum.get(count);
+                count++;
+                i++;
+            }
+        }
+
+        return result;
+    }
+}
+//runtime:13 ms
+//memory:48.9 MB
