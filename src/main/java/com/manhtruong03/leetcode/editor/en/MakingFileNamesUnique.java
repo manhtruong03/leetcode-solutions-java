@@ -61,28 +61,51 @@
 package com.manhtruong03.leetcode.editor.en;
 
 import java.util.*;
-import java.util.regex.*;
-import java.io.*;
 
 public class MakingFileNamesUnique {
   public static void main(String[] args) {
     Solution solution = new MakingFileNamesUnique().new Solution();
-    solution.getFolderNames(new String[] {"gta", "gta(1)", "gta", "avalon"});
+
+    List<String[]> testCases = new ArrayList<>();
+    testCases.add(new String[] {"pes","fifa","gta","pes(2019)"});
+    testCases.add(new String[] {"pes","fifa","gta","pes(2019)","pes"});
+    testCases.add(new String[] {"pes","fifa","gta","pes(2019)","pes","pes(1)"});
+    testCases.add(new String[] {"gta","gta(1)","gta","avalon"});
+    testCases.add(new String[] {"onepiece","onepiece(1)","onepiece(2)","onepiece(3)","onepiece"});
+    testCases.add(new String[] {"kaido","kaido(1)","kaido","kaido(1)","kaido(2)"});
+
+    int i = 1;
+    for (String[] testCase : testCases) {
+      System.out.printf("#%s%nInput : %s%n", i++, Arrays.toString(testCase));
+      System.out.printf("Output: %s%n", Arrays.toString(solution.getFolderNames(testCase)));
+    }
   }
 
   // leetcode submit region begin(Prohibit modification and deletion)
   class Solution {
-    public String[] getFolderNames(String[] names) {
-      Pattern pattern = Pattern.compile("(.*?)\\((\\d+)\\)$");
-      for (String name : names) {
-        Matcher matcher = pattern.matcher(name);
-        if (matcher.matches()) {
-          System.out.printf("%s | %s%n", matcher.group(1).trim(), matcher.group(2).trim());
-        } else {
-          System.out.println(name);
-        }
-      }
 
+    public String[] getFolderNames(String[] names) {
+      Map<String, Integer> frequency = new HashMap<>();
+      for (int i = 0; i < names.length; i++) {
+        String current = names[i];
+        int count = frequency.getOrDefault(current, 0);
+
+        while (frequency.containsKey(current)) {
+          count++;
+          frequency.put(names[i], count);
+
+          StringBuilder sb = new StringBuilder();
+          sb.append(names[i]);
+          sb.append("(");
+          sb.append(count);
+          sb.append(")");
+
+          current = sb.toString();
+        }
+
+        frequency.put(current, 0);
+        names[i] = current;
+      }
       return names;
     }
   }
