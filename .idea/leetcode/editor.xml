@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/EncodeAndDecodeTinyurl.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/doc/content/EncodeAndDecodeTinyurl.md" />
+              <option name="frontendQuestionId" value="leetcode.com535" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/EncodeAndDecodeTinyurl.java" />
+              <option name="titleSlug" value="encode-and-decode-tinyurl" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/FibonacciNumber.java">
           <value>
             <LeetcodeEditor>
@@ -157,6 +168,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/ProductOfArrayExceptSelf.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/doc/content/ProductOfArrayExceptSelf.md" />
+              <option name="frontendQuestionId" value="leetcode.com238" />
+              <option name="host" value="leetcode.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/ProductOfArrayExceptSelf.java" />
+              <option name="titleSlug" value="product-of-array-except-self" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/RemoveDuplicatesFromSortedArray.java">
           <value>
             <LeetcodeEditor>
@@ -223,14 +245,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/MakingFileNamesUnique.java">
+        <entry key="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/ProductOfArrayExceptSelf.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/doc/content/MakingFileNamesUnique.md" />
-              <option name="frontendQuestionId" value="leetcode.com1487" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/doc/content/ProductOfArrayExceptSelf.md" />
+              <option name="frontendQuestionId" value="leetcode.com238" />
               <option name="host" value="leetcode.com" />
-              <option name="path" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/MakingFileNamesUnique.java" />
-              <option name="titleSlug" value="making-file-names-unique" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/com/manhtruong03/leetcode/editor/en/ProductOfArrayExceptSelf.java" />
+              <option name="titleSlug" value="product-of-array-except-self" />
             </LeetcodeEditor>
           </value>
         </entry>
